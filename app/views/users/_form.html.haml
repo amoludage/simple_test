@@ -1,0 +1,10 @@
+.h1
+  Simple Form Test
+= simple_form_for @user do |user|
+  = user.error :base
+
+  = user.input :name
+  .radio-yes-no
+    = user.label :Indian
+    = user.collection_radio_buttons :email,[[true, 'Yes'] ,[false,'No']], :first, :last
+  = user.button :submit
